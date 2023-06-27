@@ -1,0 +1,57 @@
+body{
+    overflow: hidden;
+    background-color: black;
+}
+
+.pag {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    transition: transform 1s cubic-bezier(0,.25,0,1.0);
+    top: 0;
+    left: 0;
+}
+
+#titol {
+    width: 100vw;
+    height: 12vh;
+}
+
+h1 {
+    background-color: black;
+    color: azure;
+    margin: 0 0 0 0;
+    text-align: center;
+    font-size:10.5vh;
+}
+
+h2 {
+    background-color: black;
+    color: azure;
+    margin: 0 0 0 0;
+    text-align: center;
+    font-size:4vh;
+}
+
+table {
+    background: gray;
+}
+
+tr {
+    background-color: black;
+    color: azure;
+}
+
+td {
+    padding: 0 0 0 0;
+}
+
+.diaSetmana {
+    width: 14vw;
+    height: 5.5vh;
+}
+
+.casellaDia {
+    width: 14vw;
+    height: 16vh;
+}
