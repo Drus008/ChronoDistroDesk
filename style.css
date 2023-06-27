@@ -1,0 +1,15 @@
+body {
+    overflow: hidden;
+}
+
+.pag {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    transition: transform 1s cubic-bezier(0,.25,0,1.0);
+}
+
