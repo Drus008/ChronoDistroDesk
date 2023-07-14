@@ -67,6 +67,15 @@ td {
     border-radius: 50%;
 }
 
+.circulo {
+    margin: auto;
+    width: auto;
+    height: 4vh;
+    width: 4vh;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
 .casellaNumDia {
     background: none;
     font-size: 4vh;

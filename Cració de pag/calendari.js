@@ -15,7 +15,6 @@ function crearCalendario() {
 
     // bucle per a crear cada fila
     for (let f = 0; f < 7; f++) {
-        // creates a table row
         const row = document.createElement("tr");
         row.classList.add("filaCalendari");
       
@@ -40,18 +39,22 @@ function crearCalendario() {
                 cell.appendChild(cellText);
             }
 
-            // Creem cada casella del calendari en si
+            // Creem les caselles dels dies del calendari
             else {                
                 cell.classList.add("casellaDia");
 
+                // Creem les taules de cada dia
                 const tblDia = document.createElement("table");
                 const tblBodyDia = document.createElement("tbody");
                 tblDia.classList.add("taulaDiaMes");
 
+
+                // Creem les files de cada dia
                 for ( let fD = 0; fD<3; fD++) {
                     const rowD = document.createElement("tr");
                     rowD.classList.add("taulaFilDiaMes");
 
+                    // Fiquem el número del dia a la casella
                     if (fD==0){
                         const cellD = document.createElement("td");
                         cellD.colSpan = "3";
@@ -64,11 +67,17 @@ function crearCalendario() {
                         rowD.appendChild(cellD);
                     }
 
+                    // Fiquem els símbols si hi ha un event important
                     else for (let cD=0; cD<3; cD++){
                         if (fD!=2 || cD!=1) {
                             const cellD = document.createElement("td");
 
-                            if (cD==0 || cD==2) cellD.classList.add("casellaIconoDia");
+                            if (cD==0 || cD==2){
+                                cellD.classList.add("casellaIconoDia");
+                                    const amarillo = document.createElement("div");
+                                    amarillo.classList.add("circulo");
+                                    cellD.appendChild(amarillo);
+                            }
                             else{
                                 cellD.classList.add("casellaImportantDia");
                                 cellD.rowSpan = "2";
@@ -94,15 +103,12 @@ function crearCalendario() {
             // fiquem les caselles dins les files
             row.appendChild(cell);
         }
-      // add the row to the end of the table body
       tblBody.appendChild(row);
     }
       
-    // put the <tbody> in the <table>
+
     tbl.appendChild(tblBody);
-    // appends <table> into <body>
     document.body.appendChild(tbl);
-    // sets the border attribute of tbl to '2'
 }
 
 
